@@ -10,7 +10,7 @@
 	
 	pg_query($con, $comando);
 
-	$comando = "SELECT DISTINCT * FROM ranking";
+	$comando = "SELECT DISTINCT * FROM ranking ORDER BY pontos";
 	$res = pg_query($con, $comando);
 	$matriz = array();
 	while($linha = pg_fetch_assoc($res)){

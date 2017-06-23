@@ -17,7 +17,9 @@ $(document).ready(function(){
 
     $("#registrar").click(function(){
 
-        if($("#participante1").val() == $("#participante2").val()){
+        if ($("#participante1").val() == "Escolha" || $("#participante2").val() == "Escolha") {
+            alert("Você deve escolher os dois times.");
+        } else if($("#participante1").val() == $("#participante2").val()){
             alert("Os participantes não podem ser iguais.");
         } else {
 
@@ -32,11 +34,11 @@ $(document).ready(function(){
 
                 success : function(resp){
                     alert("Registro efetuado com sucesso!");
-                    $("table").empty();
-                    $("table").append("<tr><th>Participante</th><th>Score</th><th>Pontuação</th></tr>");
+                    $("table").empty();                    
                     for (i = 0; i < resp.length; i++){
                          $("table").prepend("<tr><td>" + resp[i].participante + "</td><td>" + resp[i].pontos + "</td><td>" + resp[i].scorefavor + "</td></tr>");
                      }
+                     $("table").prepend("<tr><th>Participante</th><th>Pontuação</th><th>scorefavor</th></tr>");
                 },
 
                 error : function(err){
