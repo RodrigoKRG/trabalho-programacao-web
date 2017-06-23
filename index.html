@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="ajax.js"></script>
+
+    <style>
+      body {
+        background-color: #9ACD32;
+      }
+      table {
+        border: solid 1px black;
+        background-color: yellow;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1>PLACAR</h1>
+    <form>
+      
+      <label for="participante1"></label>
+      <select name="time" id="participante1">
+        <option>Escolha</option>
+      
+      </select>
+      
+      <input type="number" name="placar" id="score1" min="0" max="99">
+      X
+      
+      <input type="number" name="placar" id="score2" min="0" max="99">
+      
+      <label for="participante2"></label>
+      <select name="time" id="participante2">
+        <option>Escolha</option>
+      </select>
+      
+      <input type="button" id="registrar" value="Registrar">
+
+      <table>
+        <tr><th>Participante</th><th>Score</th><th>Pontuação</th></tr>
+      </table>
+
+    </form>
+  </body>
+</html>
