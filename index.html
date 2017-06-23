@@ -7,43 +7,81 @@
     <script type="text/javascript" src="atualizaranking.js"></script>
 
     <style>
+
       body {
+        font-family: arial;
         background-color: #9ACD32;
       }
+
+      #conteudo {
+        width: 700px; 
+        margin : 0 auto;
+      }
+
       table {
         border: solid 1px black;
         background-color: yellow;
+        width: 500px; 
+        margin: 30px auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        margin-left: 10px;
+      }
+
+      #registrar {
+        margin-top: 30px;
+        margin-left : 240px;
+        width : 180px;
+        height: 40px;
+        font-size: 15pt;
+      }
+
+      #registrar:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+
       }
 
     </style>
 
   </head>
   <body>
-    <h1>PLACAR</h1>
-    <form>
-      
-      <label for="participante1"></label>
-      <select name="time" id="participante1" required>
-        <option>Escolha</option>
-      
-      </select>
-      
-      <input type="number" name="placar" id="score1" min="0" max="99">
-      X
-      
-      <input type="number" name="placar" id="score2" min="0" max="99">
-      
-      <label for="participante2"></label>
-      <select name="time" id="participante2" required>
-        <option>Escolha</option>
-      </select>
-      
-      <input type="button" id="registrar" value="Registrar">
 
-      <table>
-        <tr><th>Participante</th><th>Score</th><th>Pontuação</th></tr>
-      </table>
+    <div id="conteudo">
+      <h1>PLACAR</h1>
+      <form>
+        
+        <label for="participante1"></label>
+        <select name="time" id="participante1" required>
+          <option>Escolha Um Time</option>
+        
+        </select>
+        
+        <input type="number" name="placar" id="score1" min="0" max="99">
+        X
+        
+        <input type="number" name="placar" id="score2" min="0" max="99">
+        
+        <label for="participante2"></label>
+        <select name="time" id="participante2" required>
+          <option>Escolha Um Time</option>
+        </select>
+        </br>
+        <input type="button" id="registrar" value="Registrar">
 
-    </form>
+        <table>
+          
+        </table>
+
+      </form>
+    </div>
   </body>
 </html>

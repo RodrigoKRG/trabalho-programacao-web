@@ -7,7 +7,7 @@ $(document).ready(function(){
                     for (i = 0; i < resp.length; i++){
                          $("table").prepend("<tr><td>" + resp[i].participante + "</td><td>" + resp[i].pontos + "</td><td>" + resp[i].scorefavor + "</td></tr>");
                      }
-                     $("table").prepend("<tr><th>Participante</th><th>Pontuação</th><th>scorefavor</th></tr>");
+                     $("table").prepend("<tr><th>Participante</th><th>Pontuação</th><th>Score</th></tr>");
                 },
 
                 error : function(err){
