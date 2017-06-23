@@ -1,5 +1,3 @@
-var ponto = 0;
-
 $(document).ready(function(){
     $.ajax({
         url : "buscaTime.php",
@@ -15,6 +13,7 @@ $(document).ready(function(){
             alert("ERRO: " + err.status);
         }
     });
+
 
     $("#registrar").click(function(){
 
@@ -36,9 +35,8 @@ $(document).ready(function(){
                     $("table").empty();
                     $("table").append("<tr><th>Participante</th><th>Score</th><th>Pontuação</th></tr>");
                     for (i = 0; i < resp.length; i++){
-                        $("table").append("<tr><td>" + resp[i].participante1 + "</td><td>" + resp[i].score1 + "</td><td>" + ponto + "</td></tr>");
-                        $("table").append("<tr><td>" + resp[i].participante2 + "</td><td>" + resp[i].score2 + "</td><td>" + ponto + "</td></tr>");
-                    }
+                         $("table").prepend("<tr><td>" + resp[i].participante + "</td><td>" + resp[i].pontos + "</td><td>" + resp[i].scorefavor + "</td></tr>");
+                     }
                 },
 
                 error : function(err){
