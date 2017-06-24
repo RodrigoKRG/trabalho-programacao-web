@@ -15,7 +15,7 @@
 
       #conteudo {
         width: 700px; 
-        margin : 0 auto;
+        margin : 30px auto;
       }
 
       table {
@@ -25,17 +25,13 @@
         margin: 30px auto;
       }
 
-      h1 {
-        text-align: center;
-      }
-
       form {
         margin-left: 10px;
       }
 
       #registrar {
         margin-top: 30px;
-        margin-left : 240px;
+        margin-left : 250px;
         width : 180px;
         height: 40px;
         font-size: 15pt;
@@ -50,17 +46,36 @@
 
       }
 
+      td {
+        border : solid 1px black;
+        text-align: center;
+      }
+
+      #txt_participante {
+        margin: 40px auto;
+      }
+
+      #inserir:hover {
+        cursor:pointer;
+      }
+
     </style>
 
   </head>
   <body>
 
     <div id="conteudo">
-      <h1>PLACAR</h1>
+      
       <form>
+
+        <label for="txt_participante"></label>
+        <input type="text" id="txt_participante" name="participante">
+        <input type="button" id="inserir" value="Inserir">
+
+        </br>
         
         <label for="participante1"></label>
-        <select name="time" id="participante1" required>
+        <select name="time" id="participante1">
           <option>Escolha Um Time</option>
         
         </select>
@@ -71,7 +86,7 @@
         <input type="number" name="placar" id="score2" min="0" max="99">
         
         <label for="participante2"></label>
-        <select name="time" id="participante2" required>
+        <select name="time" id="participante2">
           <option>Escolha Um Time</option>
         </select>
         </br>

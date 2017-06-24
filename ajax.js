@@ -14,6 +14,22 @@ $(document).ready(function(){
         }
     });
 
+    $("#inserir").click(function(){
+        $.ajax({
+            url : "inserir.php",
+            method : "POST",
+            data : {participante : $("#txt_participante").val()},
+
+            success : function(resp) {
+                alert("Inserido com sucesso");
+            },
+
+            error : function(err){
+                alert("ERROR: " + err.status);
+            }
+        });
+    });
+
 
     $("#registrar").click(function(){
 
@@ -47,5 +63,4 @@ $(document).ready(function(){
             });
         }
     });
-
 });
